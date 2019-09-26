@@ -30,11 +30,11 @@ connection.connect(function(err) {
 
 // index.handlebars to root route //
 app.get("/", function(req, res) {
-    connection.query("SELECT * FROM quotes;", function(err, data) {
+    connection.query("SELECT * FROM burgers;", function(err, data) {
       if (err) {
         return res.status(500).end();
       }
   
-      res.render("index", { quotes: data });
+      res.render("index", { burgers: data });
     });
   });
