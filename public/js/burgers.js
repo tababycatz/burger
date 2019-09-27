@@ -4,7 +4,7 @@ $(function() {
       var id = $(this).data("id");
       var newDevour = $(this).data("newdevour");
   
-      var newSleepState = {
+      var newDevourState = {
         devour: newDevour
       };
   
@@ -27,7 +27,7 @@ $(function() {
   
       var newBurger = {
         name: $("#eat").val().trim(),
-        sleepy: $("[name=devour]:checked").val().trim()
+        devour: $("[name=devour]:checked").val().trim()
       };
   
       // Send the POST request.
