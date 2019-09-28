@@ -1,0 +1,18 @@
+ul {
+    background: whitesmoke;
+}
+
+.lable {
+    font-weight: bold;
+
+};
+
+.create-update-form {
+    padding: 10px;
+    margin: 10px;
+    background: pink;
+};
+
+.form-group {
+    margin-bottom: 5px;
+};
