@@ -1,5 +1,5 @@
 // Import MySQL connection.
-var connection = require("../config/connection.js");
+var connection = require("./connection.js");
 
 // Helper function for SQL syntax.
 // Let's say we want to pass 3 values into the mySQL query.
@@ -48,6 +48,7 @@ var orm = {
         throw err;
       }
       cb(result);
+      console.log(result);
     });
   },
   create: function(table, cols, vals, cb) {

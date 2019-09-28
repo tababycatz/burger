@@ -4,30 +4,16 @@
 
 <ul>
   {{#each burger}}
-    {{#unless devour}}
-      {{!-- {{> cats/cat-block sleep=true}} this is using the code from partials --}}
-    {{/unless}}
+    {{!-- {{#unless this.devoured}} --}}
+    {{#this.id}}
+    {{this.burger_name}}
+    {{!-- {{devoured=true}} --}}
+    {{!-- {{/unless}} --}}
   {{/each}}
 </ul>
 
 <h2>Burgers Devoured!</h2>
 
-<ul>
-  {{#each burger}}
-    {{#if devour}}
-      
-      <li>
-	{{name}}
-
-	<button class="change-devour" data-id="{{id}}" data-neweat="{{sleep}}">
-		{{#if devoured}}SLEEP TIME!{{else}}WAKE UP!{{/if}}
-	</button>
-
-	<button class="delete-cat" data-id="{{this.id}}">DELETE!</button>
-</li>
-    {{/if}}
-  {{/each}}
-</ul>
 
 <h2>Add a Burger</h2>
 <form class="create-form">
