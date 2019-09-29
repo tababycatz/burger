@@ -4,16 +4,25 @@
 
 <ul>
   {{#each burger}}
-  {{#unless devoured}}
-  {{this.id}}
-  {{this.burger_name}}
-  {{/unless}}
+    {{#unless devoured}}
+      {{this.id}}
+      {{this.burger_name}}
+      <button class="change-devour" data-id="{{this.id}}" data-newdevour="{{devour}}">DEVOUR!</button>
+    {{/unless}}
   {{/each}}
 </ul>
-<button class="change-devour" data-id="{{this.id}}" data-newdevour="{{devour}}">DEVOUR!</button>
 
 <h2>Burgers Devoured!</h2>
 
+
+<ul>
+{{#each burger}}
+  {{#if devoured}}
+    {{this.id}}
+    {{this.burger_name}}
+  {{/if}}
+{{/each}}
+</ul>
 
 <h2>Add a Burger</h2>
 
