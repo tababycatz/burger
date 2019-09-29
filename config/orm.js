@@ -14,7 +14,7 @@ function printQuestionMarks(num) {
   }
 
   return arr.toString();
-}
+};
 
 // Helper function to convert object key/value pairs to SQL syntax
 function objToSql(ob) {
@@ -37,7 +37,7 @@ function objToSql(ob) {
 
   // translate array of strings to a single comma-separated string
   return arr.toString();
-}
+};
 
 // Object for all our SQL statement functions.
 var orm = {
@@ -89,6 +89,7 @@ var orm = {
       cb(result);
     });
   }
+};
 
 // Export the orm object for the model (cat.js).
 module.exports = orm;
